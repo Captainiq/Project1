@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/app/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/app/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/app/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"> <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/app/common.css"> <!-- Common -->
+    <link rel="stylesheet" href="../css/app/dropzone.min.css"> <!-- Dropzone -->
+    <link rel="stylesheet" href="../css/app/questionnaire.css"> <!-- Questionnaire -->
+
+    <title>Hormone Consults</title>
+  </head>
+  <body>
+
+
+    <!-- Header -->
+    <header class="app_header">
+      <div class="header_wrap">
+        <div class="site_brand">
+          <a class="header_logo" href="#">
+            <img src="../img/app/hormone_consults_logo.png">
+          </a>
+          <a class="header_phone" href="tel:5306258172">(530) 625-8172</a>
+        </div>
+        <div class="help">
+          <a href="#">Help</a>
+        </div>
+      </div>
+    </header>
+    <!--//END. Header -->
+
+    <!-- Questionnaire  -->
+    <section class="inner_section">
+     <div class="bg_shapes">
+      <div class="shape1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.9 340.4"><path d="M0 0l186.2 319.1c9.3 15.9 29.7 21.4 45.7 12.2 0 0 109-62.3 174-99.4V0H0z" fill="#fbfcfd"/></svg>
+      </div>
+      <div class="shape2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.9 340.4"><path d="M405.9 0L219.7 319.1c-9.3 15.9-29.7 21.4-45.7 12.2 0 0-109-62.3-174-99.4V0h405.9z" fill="#fbfcfd"/></svg>
+      </div>
+     </div>
+     <div class="main_content">
+      <div class="container">
+        <div class="questionnaire">
+
+          <!-- Register -->
+          <div id="register" class="ques_transition">
+            <div class="quiz_head">
+              <div class="quiz_body">
+                <h2>Get started with your online visit</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum orci 
+                  vel erat pellentesque, eget dictum nunc feugiat. Curabitur scelerisque eros 
+                  vitae dolor aliquam tincidunt eu et odio Cras dignissim nulla.
+                </p>
+              </div>
+            </div>
+            <div class="form_sec">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form_group">
+                    <div class="formElement">
+                      <input id="firstName" type="text"/>
+                      <label class="element_label" for="firstName">First Name</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form_group">
+                    <div class="formElement">
+                      <input id="lastName" type="text"/>
+                      <label class="element_label" for="lastName">Last Name</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="formElement">
+                  <input id="emailAddress" type="email"/>
+                  <label class="element_label" for="emailAddress">Email Address</label>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="formElement">
+                  <input id="password" type="password"/>
+                  <label class="element_label" for="password">Create Password</label>
+                </div>
+              </div>
+      
+            
+              <div class="list_points">
+                <label class="points">
+                  <span class="dot_sec">
+                    <span class="dot"></span>
+                  </span>
+                  <span class="txt">Password must be at least 8 characters long</span>
+                </label>
+                <label class="points">
+                  <span class="dot_sec">
+                    <span class="dot"></span>
+                  </span>
+                  <span class="txt">Include at least one uppercase letter or number or symbol</span>
+                </label>
+              </div>
+
+
+              <div class="custom_checkbox">
+                <input class="inp-cbx" id="cbx" type="checkbox"/>
+                <label class="cbx" for="cbx"><span>
+                    <svg width="12px" height="9px" viewbox="0 0 12 9">
+                      <polyline points="1 5 4 8 11 1"></polyline>
+                    </svg></span><span class="cbx_txt">I agree to <a href="#">terms and conditions</a> & <a href="#">privacy policy</a></span>
+                </label>
+              </div>
+    
+              <div class="btn_block">
+                <button class="btn_submit" id="to_quiz">
+                  <span class="loadingspinner" style="display: none;"></span>
+                  <span>Sign up & Start My Visit</span>
+                </button>
+                <label>Already a member? <a href="#" class="">Log in and continue</a></label>
+              </div>
+
+            </div>
+          </div>
+           <!--//END. REGISTER -->
+
+           <!-- Form -->
+           <div id="quiz" class="ques_transition" style="display: none;">
+
+            <div class="quiz_step">
+              <ul id="progressbar">
+                <li id="progress_step1">Basic Info</li>
+                <li id="progress_step2">Medical Questions</li>
+                <li id="progress_step3">Verifications</li>
+              </ul>
+            </div>
+
+            <!-- BASIC -->
+            <div id="step1" class="ques_transition">
+              <div class="quiz_head">
+                <div class="quiz_left">
+                  <button class="quiz_back" id="back_register">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823"><path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/></svg>
+                  </button>
+                </div>
+                <div class="quiz_body">
+                  <h2>Basics Information</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form_sec custom_label">
+                
+                
+                <div class="form_group">
+                  <label class="form_label">Gender <span>*</span></label>
+                  <div class="gender">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="custom_check">
+                          <input type="radio" name="gender"/>
+                          <span class="gender_icon male">
+                            <img src="../img/app/men.png">
+                            <span class="gender_name">I’m man</span>
+                          </span>
+                      </label>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="custom_check">
+                          <input type="radio" name="gender"/>
+                          <span class="gender_icon female">
+                            <img src="../img/app/female.png">
+                            <span class="gender_name">I’m women</span>
+                          </span>
+                      </label>
+                      </div>
+                    </div>
+                     
+                      
+                  </div>
+                </div>
+
+                <div class="form_group">
+                  <label class="form_label">Date of Birth <span>*</span></label>
+                  <div class="formElement">
+                    <input class="word_spacing" id="dob" type="tel"/>
+                    <label class="element_label" for="dob">MM/DD/YYYY</label>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <label class="form_label">Zip Code <span>*</span></label>
+                  <div class="formElement">
+                    <input id="zip" type="text"/>
+                    <label class="element_label" for="zip">#####</label>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <label class="form_label">Phone Number <span>*</span></label>
+                  <div class="formElement">
+                    <input id="phone" type="tel"/>
+                    <label class="element_label" for="phone">(###)###-####</label>
+                  </div>
+                </div>
+
+                <div class="btn_block">
+                  <button class="btn_submit" id="to_step2">
+                    <span class="loadingspinner" style="display: none;"></span>
+                    <span>Continue</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//END. BASIC -->
+            
+            <!-- MEDICAL QUESTIONS -->
+            <div id="step2" class="ques_transition" style="display: none;">
+              <div class="quiz_head">
+                <div class="quiz_left">
+                  <button class="quiz_back" id="back_step1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823"><path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/></svg>
+                  </button>
+                </div>
+                <div class="quiz_body">
+                  <h2>Medical Questions</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ipsum eu dolor mollis 
+                    cursus. Proin malesuada gravida faucibus. Quisque nec sem pellentesque, rutrum quam et, 
+                    porta purus. Vestibulum ut cursus orci. Nam rutrum sed nulla eu varius.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form_sec">
+                <div class="medical">
+                  <img src="../img/app/medical.png">
+                </div>
+                <div class="btn_block">
+                  <button class="btn_submit" id="to_step3">
+                    <span class="loadingspinner" style="display: none;"></span>
+                    <span>Continue</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//END. MEDICAL QUESTIONS -->
+            
+            <!-- QUESTIONS 1 -->
+            <div id="step3" class="ques_transition" style="display: none;">
+              <div class="quiz_head">
+                <div class="quiz_left">
+                  <button class="quiz_back" id="back_step2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823"><path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/></svg>
+                  </button>
+                </div>
+                <div class="quiz_body">
+                  <h3 class="question">
+                    Do you currently have or have you experienced any of the following? 
+                    <small>(exclusion criteria - do not include this on wording) </small>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="form_sec">
+                <div class="form_group">
+                  <label for="opt1" class="radio custom_radio">
+                    <input type="checkbox" name="rdo" id="opt1" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Fertility issues</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt2" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt2" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Breast Cancer</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt3" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt3" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">High Hematocrit <small>(Polycythemia)</small></span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt4" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt4" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Heart issues</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt5" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt5" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">MI or stroke in the last 6 months</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt6" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt6" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Sleep apnea</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt7" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt7" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Lower UTI Symptoms</span>
+                  </label>
+                </div>
+
+                <div class="btn_block">
+                  <button class="btn_submit" id="to_step4">
+                    <span class="loadingspinner" style="display: none;"></span>
+                    <span>Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//END. QUESTIONS 1 -->
+            
+            <!-- QUESTIONS 2 -->
+            <div id="step4"  class="ques_transition" style="display: none;">
+              <div class="quiz_head">
+                <div class="quiz_left">
+                  <button class="quiz_back" id="back_step3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823"><path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/></svg>
+                  </button>
+                </div>
+                <div class="quiz_body">
+                  <h3 class="question">
+                    Have you had a physical exam with a health care provider in the past 3 years?
+                  </h3>
+                </div>
+              </div>
+
+              <div class="form_sec">
+
+                <div class="form_group">
+                  <label for="opt8" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt8" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Yes it was normal</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt9" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt9" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Yes, but there were issues</span>
+                  </label>
+                </div>
+
+                <div id="whereIssue" class="sub_option" style="display: none;">
+                  <div class="form_group">
+                    <label class="form_label">What were the issues? <span>*</span></label>
+                    <div class="formElement">
+                      <textarea placeholder="Please Comment..."></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form_group">
+                  <label for="opt10" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt10" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">No</span>
+                  </label>
+                </div>
+
+                <div class="btn_block">
+                  <button class="btn_submit" id="to_step5">
+                    <span class="loadingspinner" style="display: none;"></span>
+                    <span>Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//END. QUESTIONS 2 -->
+            
+            <!-- QUESTIONS 3 -->
+            <div id="step5"  class="ques_transition" style="display: none;">
+              <div class="quiz_head">
+                <div class="quiz_left">
+                  <button class="quiz_back" id="back_step4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823"><path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/></svg>
+                  </button>
+                </div>
+                <div class="quiz_body">
+                  <h3 class="question">
+                    Have you ever been diagnosed with any of the following?
+                  </h3>
+                </div>
+              </div>
+
+              <div class="form_sec">
+                <div class="form_group">
+                  <label for="opt11" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt11" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Klinefelter Syndrome</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt12" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt12" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Primary Hypogonadism</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt13" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt13" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Diabetes</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt14" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt14" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Hypo or Hyper Thyroidism</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt15" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt15" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">HIV</span>
+                  </label>
+                </div>
+                <div class="form_group">
+                  <label for="opt16" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt16" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Kidney Disease</span>
+                  </label>
+                </div>
+
+                <div class="btn_block">
+                  <button class="btn_submit" id="to_step6">
+                    <span class="loadingspinner" style="display: none;"></span>
+                    <span>Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//END. QUESTIONS 3 -->
+            
+            <!-- QUESTIONS 4 -->
+            <div id="step6"  class="ques_transition" style="display: none;">
+              <div class="quiz_head">
+                <div class="quiz_left">
+                  <button class="quiz_back" id="back_step5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823"><path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/></svg>
+                  </button>
+                </div>
+                <div class="quiz_body">
+                  <h3 class="question">
+                    Have you used Testostosterone or any other form of hormone therapy before?
+                  </h3>
+                </div>
+              </div>
+
+              <div class="form_sec">
+
+                <div class="form_group">
+                  <label for="opt17" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt17" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Yes , it was prescribed to me</span>
+                  </label>
+                </div>
+
+                <div id="Prescribed" class="sub_option" style="display: none;">
+                  <div class="form_group">
+                    <label class="form_label">What kind of hormone therapy were you prescribed? <span>*</span></label>
+                    <div class="formElement">
+                      <textarea placeholder="Please Comment..."></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form_group">
+                  <label for="opt18" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt18" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">Yes, but not with a prescription</span>
+                  </label>
+                </div>
+
+                <div id="Prescription" class="sub_option" style="display: none;">
+                  <div class="form_group">
+                    <label class="form_label">What kind of hormone therapy were you using and how long did you use it for? <span>*</span></label>
+                    <div class="formElement">
+                      <textarea placeholder="Please Comment..."></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form_group">
+                  <label for="opt19" class="radio custom_radio">
+                    <input type="radio" name="rdo" id="opt19" class="hidden"/>
+                    <span class="radio_dot">
+                      <span class="label"></span>
+                    </span>
+                    <span class="radio_text">No</span>
+                  </label>
+                </div>
+
+                <div class="btn_block">
+                  <button class="btn_submit" id="to_step7">
+                    <span class="loadingspinner" style="display: none;"></span>
+                    <span>Continue</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//END. QUESTIONS 3 -->
+            
+            <!-- VERIFICATION -->
+            <div id="step7"  class="ques_transition" style="display: none;">
+              <div class="quiz_head">
+                <div class="quiz_left">
+                  <button class="quiz_back" id="back_step6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823"><path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/></svg>
+                  </button>
+                </div>
+                <div class="quiz_body">
+                  <h2>Verification</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                </div>
+              </div>
+
+              <div class="form_sec">
+
+                <div class="form_group">
+                  <label class="form_label">Upload Your Photo <span>*</span></label>
+                  
+                  <div id="dropzone">
+                    <form class="dropzone needsclick" id="demo-upload" action="/upload">
+                      <div class="dz-message needsclick">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001"><path d="M405.967 195.112c-1.069-78.061-64.902-141.239-143.213-141.239-34.835 0-68.396 12.672-94.498 35.682-23.296 20.535-39.232 47.977-45.543 78.106-.461-.005-.918-.009-1.374-.009C54.434 167.652 0 222.085 0 288.991S54.434 410.33 121.34 410.33h84.743c6.029 0 10.919-4.888 10.919-10.919 0-6.031-4.89-10.919-10.919-10.919H121.34c-54.866 0-99.502-44.636-99.502-99.501s44.636-99.501 99.502-99.501c2.923 0 6.013.157 9.448.48 5.822.545 11.049-3.596 11.842-9.396 3.932-28.82 18.161-55.327 40.067-74.638 22.111-19.492 50.542-30.226 80.056-30.226 66.935 0 121.389 54.455 121.389 121.389 0 2.41-.179 4.894-.368 7.524l-.081 1.118c-.227 3.212.975 6.361 3.287 8.604 2.309 2.243 5.488 3.351 8.697 3.03 2.904-.293 5.834-.44 8.708-.44 47.297 0 85.778 38.48 85.778 85.778 0 47.297-38.48 85.777-85.778 85.777h-89.111c-6.029 0-10.919 4.888-10.919 10.919 0 6.031 4.89 10.919 10.919 10.919h89.111c59.339 0 107.616-48.275 107.616-107.615-.001-58.807-47.421-106.752-106.034-107.601z"/><path d="M262.755 105.192c-45.658 0-84.742 34.121-90.914 79.367-.815 5.975 3.369 11.48 9.343 12.295.501.068.998.102 1.489.102 5.375 0 10.059-3.97 10.804-9.444 4.703-34.48 34.486-60.482 69.277-60.482 6.031 0 10.919-4.888 10.919-10.919.001-6.03-4.888-10.919-10.918-10.919zM312.41 320.052l-39.718-35.48c-6.847-6.12-17.177-6.119-24.027-.001l-39.718 35.482c-4.498 4.017-4.886 10.92-.869 15.418 4.017 4.496 10.919 4.887 15.418.869l26.264-23.462v134.331c0 6.031 4.888 10.919 10.919 10.919 6.03 0 10.919-4.888 10.919-10.919V312.876l26.265 23.463c2.082 1.861 4.681 2.776 7.27 2.776 3.002 0 5.99-1.229 8.148-3.645 4.015-4.498 3.626-11.4-.871-15.418z"/></svg>    
+                        <span>Drop files here or click to upload.</span>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+
+                <div class="btn_block">
+                  <button class="btn_submit">
+                    <span class="loadingspinner" style="display: none;"></span>
+                    <span>Upload & finish</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//END. VERIFICATION -->
+
+           </div> 
+           <!--//END. Form -->
+
+        </div>
+       </div>
+     </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app_footer">
+      <div class="container">
+        <div class="footer_top">
+         
+          <div class="footer_logo">
+            <a href="#">
+              <img src="../img/app/hormone_consults_logo.png">
+            </a>
+          </div>
+      
+          <div class="middle_block">
+            <div class="footer_nav">
+              <div class="nav_block">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">HRT for Men</a></li>
+                  <li><a href="#">HRT for Women</a></li>
+                </ul>
+              </div>
+              <div class="nav_block">
+                <ul>
+                  <li><a href="#">Doctors</a></li>
+                  <li><a href="#">Find a Pharmacy</a></li>
+                  <li><a href="#">Find a Provider</a></li>
+                </ul>
+              </div>
+              <div class="nav_block">
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="technology_logos">
+              <div class="tech_block shadow_block">
+                <label>Payment Partners</label>
+                <div class="tect_logo partner">
+                  <a class="amazone_pay" target="_blank" href="https://pay.amazon.com/">
+                    <img src="../img/app/amazone_pay.png">
+                  </a>
+                  <a class="stripe" target="_blank" href="https://stripe.com/">
+                    <img src="../img/app/stripe.png">
+                  </a>
+                </div>
+              </div>
+              <div class="tech_block shadow_block">
+                <label>Cloud Partners</label>
+                <div class="tect_logo">
+                  <a class="microsoft_azure" target="_blank" href="https://azure.microsoft.com/">
+                    <img src="../img/app/microsoft_azure.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_address shadow_block">
+            <p>
+              Endotech Solutions ,12005 Bee Cave Rd,<br>
+              Suite 1A,Bee Cave, Texas-78738 
+            </p>
+            <a href="mailto:support@hormonesandme.com">support@hormonesandme.com</a>
+            <p>(530) 625-8172</p>
+            <img src="../img/app/hippa_compliant.png">
+          </div>
+          
+        </div>
+
+        <div class="footer_bottom">
+          <p>© Copyright 2020 - Hormones & Me</p>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--//END. Footer -->
+
+    <!-- Jquery -->
+    <script src="../js/app/floating.js"></script><!-- Floating  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><!-- Jquery Latest  -->
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/app/steps.js"></script><!-- Steps -->
+    <script src="../js/app/dropzone.min.js"></script><!-- Dropzone -->
+
+  </body>
+</html>

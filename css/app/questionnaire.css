@@ -1,0 +1,696 @@
+/* --------------------------------------------------------
+
+Style Sheet for Hormone Consults
+
+version: 1.0.0
+last modified: 25.03.2020 by SHIJIN G
+author: SHIJIN G
+email: shijin@neovibe.in
+website: https://www.hormoneconsults.com/
+
+----------------------------------------------------------*/
+
+.questionnaire {
+    max-width: 600px;
+    padding: 40px 20px 80px;
+    margin: 0px auto;
+}
+.quiz_head {
+    display: flex;
+    margin-bottom: 25px;
+}
+.quiz_body{
+    margin: 0;
+}
+.quiz_head h2{
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0px 0px 5px;
+}
+.quiz_head p{
+    font-size: 14px;
+    margin: 0px;
+    opacity: 0.9;
+    line-height: 22px;
+}
+
+
+
+
+/*------------------------------------------------- Forms */
+
+.formElement{
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+.formElement input{
+	width: 100%;
+    padding: 24px 20px 6px;
+	border-radius: 2px;
+	border: solid 1px var(--input-border-color);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-color);
+    transition: all 0.2s ease-in-out;
+}
+.formElement textarea{
+	width: 100%;
+    padding: 10px 20px;
+	border-radius: 2px;
+	border: solid 1px var(--input-border-color);
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 100px;
+    color: var(--main-color);
+    transition: all 0.2s ease-in-out;
+}
+.formElement input:focus{
+    border-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+}
+.formElement textarea:focus{
+    border-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+}
+.formElement input:focus + label{
+    color: var(--primary-color);
+}
+.formElement label{
+	font-size: 14px;
+	color: var(--main-color);
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 20px;
+    left: 20px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease 0s, color 0.3s ease 0s;
+    z-index: 4;
+    transform-origin: 0px 50% 0px;
+    pointer-events: none;
+}
+.formElement label.active{
+    transform: translateY(calc(-50% - 10px)) scale(0.76);
+}
+
+.formElement label.inactive{
+	margin: 0;
+}
+.formElement label.transition{
+	 -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+          -o-transition: all .2s linear;
+             transition: all .2s linear;
+}
+.form_group{
+    margin-bottom: 15px;
+}
+
+.list_points{
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.list_points .points{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+.points .dot{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #f2a157;
+    margin-right: 10px;
+}
+.points .txt{
+    opacity: 0.8;
+}
+
+
+.btn_block {
+    margin-top: 20px;
+}
+.btn_submit{
+    color: #fff !important;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    padding: 6px 24px;
+    height: 62px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 18px;
+    box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_submit:hover{
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+}
+.btn_block label{
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+}
+.btn_block label a{
+    color: var(--primary-color);
+}
+
+
+.loadingspinner {
+	pointer-events: none;
+	width: 24px;
+	height: 24px;
+	border: 3px solid transparent;
+	border-color: rgba(255,255,255,0.5);
+	border-top-color: #fff;
+	border-radius: 50%;
+    animation: loadingspin 0.7s linear infinite;
+    margin-right: 12px;
+}
+
+@keyframes loadingspin {
+	100% {
+        transform: rotate(360deg)
+	}
+}
+
+
+.custom_label .formElement label.inactive{
+    opacity: 0.5;
+}
+
+/*-------------------------------------- CUSTOM CHECKBOX */
+
+.cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+.cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+.cbx_txt{
+    font-size: 13px; 
+    opacity: 0.8;
+}
+.cbx .cbx_txt a{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.inp-cbx{
+    display: none;
+}
+.cbx span:first-child {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 2px solid var(--input-border-color);
+    transition: all 0.2s ease;
+}
+.cbx span:first-child svg {
+    position: absolute;
+    z-index: 1;
+    top: 6px;
+    left: 5px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--action-color);
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+    transition-delay: 0.2s;
+}
+.cbx span:last-child {
+    margin-left: 10px;
+}
+
+.cbx:hover span:first-child {
+    border-color: var(--action-color);
+}
+
+.inp-cbx:checked + .cbx span:first-child {
+    border-color: var(--action-color);
+    background: var(--action-color);
+    animation: check 0.6s ease;
+}
+.inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+.inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(2.2);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.inp-cbx:checked + .cbx span:last-child {
+    transition: all 0.3s ease;
+}
+.inp-cbx:checked + .cbx span:last-child:after {
+    transform: scaleX(1);
+    transition: all 0.3s ease;
+}
+
+@keyframes check {
+    50% {
+        transform: scale(1.2);
+    }
+}
+  
+
+
+/*---------------------------- CUSTOM RADIO  */
+
+.radio {
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    margin: 0px;
+    padding: 20px 20px;
+    border: 1px solid var(--input-border-color);
+    background-color: var(--main-bg-color);
+    border-radius: 2px;
+    box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+}
+.radio:hover{
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+}
+.radio .label {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--input-border-color);
+    border-radius: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.radio .label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: var(--action-color);
+    transform: scale(0);
+    transition: all 0.2s ease;
+    opacity: 0.08;
+    pointer-events: none;
+}
+.radio:hover .label:after {
+    transform: scale(3.6);
+}
+.radio input[type="radio"]:checked + span .label  {
+    border-color: var(--action-color);
+}
+.radio input[type="radio"]:checked + span .label:after {
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+    opacity: 1;
+}
+.radio input[type="checkbox"]:checked + span .label  {
+    border-color: var(--action-color);
+}
+.radio input[type="checkbox"]:checked + span .label:after {
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+    opacity: 1;
+}
+.hidden {
+    display: none;
+}
+
+
+.quiz_back{
+    background-color: var(--main-bg-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.08);
+    justify-content: center;
+    margin-right: 18px;
+    border: 1px solid #f7f7f7;
+    cursor: pointer;
+}
+.quiz_back svg{
+    width: 18px;
+    height: 18px;
+}
+
+.quiz_back svg path{
+    fill: #bec4c9;
+}
+
+/*---------- TRANSITION  */
+
+.ques_transition {
+    -webkit-animation: fade-in-right .6s cubic-bezier(.39,.575,.565,1) both;
+         -o-animation: fade-in-right .6s cubic-bezier(.39,.575,.565,1) both;
+            animation: fade-in-right .6s cubic-bezier(.39,.575,.565,1) both;
+}
+
+@-webkit-keyframes fade-in-right {
+    0% {
+        opacity:0;
+        -webkit-transform:translateX(50px);
+                transform:translateX(50px);
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:translateX(0);
+                transform:translateX(0);
+    }
+}
+@-o-keyframes fade-in-right {
+    0% {
+        opacity:0;
+        -o-transform:translateX(50px);
+        transform:translateX(50px);
+    
+    }
+    100% {
+        opacity:1;
+        -o-transform:translateX(0);
+        transform:translateX(0);
+    }
+}
+@keyframes fade-in-right {
+    0% {
+        opacity:0;
+        -webkit-transform:translateX(50px);
+            -o-transform:translateX(50px);
+                transform:translateX(50px);
+    
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:translateX(0);
+            -o-transform:translateX(0);
+                transform:translateX(0);
+    }
+}
+
+
+/*-------------------------STEP PROGRESS  */
+
+#progressbar {
+	margin-bottom: 50px;
+	overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: var(--main-color);
+	text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 50px;
+	height: 50px;
+	display: block;
+	font-size: 14px;
+	color: var(--main-color);
+    background: var(--main-bg-color);
+    border: 1px solid var(--input-border-color);
+	border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: var(--input-border-color);
+	position: absolute;
+	left: -50%;
+    top: calc(50% - 10px);
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+	color: var(--main-bg-color);
+}
+#progressbar li.complete:before,  #progressbar li.complete:after{
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+	color: var(--main-bg-color);
+}
+#progressbar li.complete:before{
+    content: '';
+    background-image: url('../../img/app/tick.svg');
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 15px 16px;
+}
+
+.word_spacing{
+    word-spacing: -3px;
+}
+
+.form_label {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0px 0px 8px;
+}
+.form_label span{
+    color: #ff056f;
+}
+
+
+.custom_check input[type="radio"] {
+    display: none;
+}
+.custom_check img {
+    padding: 0px;
+    margin: 0px;
+    width: 30px;
+    margin-right: 20px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.gender_icon{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom_check input[type="radio"]:checked + .gender_icon {
+    border-color: var(--secondary-color);
+    background-color: #fef9f5;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.custom_check{
+    width: 100%;
+}
+.custom_check .gender_icon{
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--input-border-color);
+}
+.gender_name {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.question {
+    font-size: 17px;
+    margin: 2px 0 0;
+    line-height: 24px;
+}
+
+.sub_option{
+    padding-left: 56px;
+    margin-bottom: 30px;
+}
+
+/*-------------------------------- FILE UPLOAD  */
+
+.dropzone{
+    border: none;
+    background-color: #f6f7fd;
+    border-radius: 4px;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropzone .dz-message{
+    width: 100%;
+    margin: 0px;
+    border: 2px dashed #bdc2d6;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+.dropzone .dz-message span{
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+.dropzone .dz-message svg{
+    width: 70px;
+    height: 70px;
+}
+.dropzone .dz-message svg path{
+    fill: #bdc2d6;
+}
+
+
+@media screen and (max-width: 1200px){
+    .quiz_head h2 {
+        font-size: 28px;
+    }
+    .quiz_head p {
+        font-size: 13px;
+    }
+    .formElement input {
+        font-size: 13px;
+        padding: 20px 15px 6px;
+    }
+    .formElement label {
+        font-size: 13px;
+        right: 15px;
+        left: 15px;
+    }
+    .formElement label.active {
+        transform: translateY(calc(-50% - 9px)) scale(0.76);
+    }
+    .cbx span:first-child {
+        width: 22px;
+        height: 22px;
+    }
+    .cbx span:first-child svg {
+        top: 5px;
+        left: 3px;
+    }
+    .btn_submit {
+        height: 55px;
+        font-size: 14px;
+    }
+    .loadingspinner{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .main_content {
+        overflow: hidden;
+    }
+
+}
+@media screen and (max-width: 540px){
+    .questionnaire {
+        padding: 40px 0px 40px;
+    }
+    .quiz_back{
+        width: 44px;
+        height: 44px;
+    }
+    #progressbar li::before{
+        width: 40px;
+        height: 40px;
+    }
+    #progressbar li.complete::before {
+        background-size: 15px;
+        background-position: 11px 12px;
+    }
+    #progressbar li {
+        font-size: 9px;
+    }
+    .quiz_head h2 {
+        font-size: 24px;
+    }
+    .inp-cbx:checked + .cbx span:last-child {
+        width: 220px;
+    }
+    .custom_check img {
+        width: 25px;
+    }
+    .radio{
+        font-size: 13px;
+        padding: 15px 15px;
+    }
+    .radio .label {
+        width: 20px;
+        height: 20px;
+    }
+    .radio .label::after {
+        top: 3px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+    }
+}
